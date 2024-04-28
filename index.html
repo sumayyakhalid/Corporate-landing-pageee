@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+
+  <style>
+    :root{
+      --primary:#9b92ff;
+    }
+    * {
+      font-family: system-ui;
+    }
+
+    .navbar-toggler {
+      color: rgb(222 204 204 / 65%) !important;
+      background-color: #f9f7f7 !important;
+    }
+
+    .navbar-nav li a:hover {
+      color: red !important;
+
+    }
+
+    .navbar {
+      z-index: 999;
+    }
+
+    .navbar-toggler:focus {
+      box-shadow: 0 0 0 !important;
+    }
+
+    .navbar-toggler {
+      background-color: transparent !important;
+      border: 0px;
+    }
+
+    .nav-color {
+      background:white;
+    }
+
+    .profile_image {
+      background: url('https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?w=740&t=st=1707325364~exp=1707325964~hmac=bd0beba4ff0f2a31890a4961b0d794e3c7afa1579b690c4f590528a50450c10a') center top;
+      width: 60px;
+      height: 60px;
+      overflow: hidden;
+      background-size: cover;
+    }
+
+    .line {
+      width: 100px;
+      background-color: #122b46;
+      height: 7px;
+    }
+    .main_header_div{
+      background:url('images/header_bg.png') no-repeat center;
+      background-size: cover;
+    }
+  @media (max-width: 991px) {
+    .main_header_div{
+        background: none !important;
+      }
+      .navbar_Color{
+      background: linear-gradient(339deg, #ffffff, #ff78e8) !important
+    }
+    .navbar-collapse{
+      background:white;
+      
+    } 
+  }
+  .navbar_Color{
+      background-color: #9b92ff;
+    }
+    .start_free_trail{
+      transition: 0.5s ease-in-out;
+    }
+    .start_free_trail:hover {
+      scale: 1.05;
+    }
+    /* features */
+    .feature_cards{
+    transition: 0.4s ease-in-out;
+    }
+    .feature_cards:hover{
+      scale: 1.1;
+    }
+    /* about us */
+    .about_icon{
+      /* background-color: #fda4cced; */
+      height: 60px;
+      width: 60px;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 15px;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+    .first_icon{
+      background-color: red;
+    }
+    .second_icon{
+      background-color: #8a8aba;
+    }
+    .third_icon{
+      background-color: green;
+    }
+    .about_us{
+      /* background: linear-gradient(343deg, #fe615d24, #ff0df04a); */
+      background: url("images/about_bg.png") no-repeat ;
+      background-size: cover;
+    }
+    .services{
+      margin-top: 100px !important;
+    }
+    
+  </style>
+
+<body>
+  <!-- navbar -->
+  <header class="position-relative main_header_div header">
+    <nav class="position-absolute top-0 position-fixed navbar navbar-expand-lg navbar-light "
+      style="width:-webkit-fill-available;">
+        <div class="nav-color"></div>
+        <div class="container-fluid">
+          <a class="navbar-brand fw-bolder fw-italic p-2  fs-6" href="#"
+            style=" color: #ffa309"><img src="images/logo.webp" height="30" width="150" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <img src="images/delete.png" alt="">
+        </button>
+        <div class="collapse navbar-collapse rounded-4 p-3 " id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto me-5 mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link active   text-white fw-bold" aria-current="page" href="#" style="color:#9b92ff;">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white fw-bold" href="#" style="color:#ffa309;">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white fw-bold" href="#" style="color:#ffa309;">Clients</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white fw-bold" href="#" style="color:#ffa309;">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white fw-bold" href="#" style="color:#ffa309;">Blogs</a>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+    <div class="row align-items-center justify-content-center m-0 p-lg-5">
+        <div class="col-lg-5 col-md-8 com-sm-11 mt-5 p-lg-5">
+            <div class="d-flex mt-5 pt-5">
+                <img src="images/checklist.png" height="15" width="15" alt="">
+                <h6 class="fw-bold" style="color: #726acb;">CAPTECH SOFTWARE HOUSE</h6>
+            </div>
+            <h1 class="fw-bold">Welcome to Capital Technologies, where we blend innovation.</h1>
+            <p class="fs-5">Explore our site, discover the magic, and let's paint a future that's as limitless as your imagination. </p>
+            <button class="border start_free_trail btn rounded-5 text-bg-danger fw-semibold shadow">Start Free Trial <img src="images/next.png" style="filter:invert(1)" width="15" height="15" alt=""></button>
+        </div>
+        <div class="col-lg-6 col-md-8 col-sm-11 mt-5 pt-lg-5 text-center">
+            <img src="images/header_img.png" height="auto" width="500" class="img-fluid" style="filter: drop-shadow(0px 6px 5px #00000060);" alt="">
+        </div>
+    </div>
+  </header>
+  <!-- Features Section -->
+  <section class="features mt-5 ">
+    <div class="container">
+      <div class="row m-0">
+        <h4 style="color:var(--primary)">Features</h4>
+        <div class="col-lg-5 col-md-8 com-sm-11">
+          <h1 class="text-dark fw-bold">Business Start With The <br>
+            <span class="fw-light h2 text-dark" >Best Features</span></h1>
+        </div>
+        <div class="col-lg-6 col-md-8 col-sm-12">
+           <p>Embracing innovation as a culture, constantly pushing boundaries to deliver cutting-edge solutions.Pioneering new features and enhancements.</p>
+        </div>
+       <div class="container">
+        <div class="row my-5 justify-content-center">
+          <div class="col-lg-4 col-md-6 col-sm-12 my-2 ">
+          <a href="" class="text-decoration-none mx-2">
+            <div class="feature_cards rounded-4 bg-white shadow p-4">
+              <div class="d-flex align-items-center">
+                <img src="https://cdn-icons-png.freepik.com/256/4053/4053247.png?uid=P130516280&ga=GA1.1.1719210483.1702021277&semt=ais" width="60" height="60" alt="">
+                <h4 class="mx-4 text-dark">Continuous Innovation</h4>
+              </div>
+              <p class="m-2 text-dark">From concept to deployment, leveraging the latest technologies to build scalable  products.</p>
+            </div>
+          </a>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 my-2 ">
+           <a href="" class="text-decoration-none mx-2">
+            <div class="feature_cards rounded-4 bg-white shadow p-4">
+              <div class="d-flex align-items-center">
+                <img src="https://cdn-icons-png.freepik.com/256/7552/7552320.png?uid=P130516280&ga=GA1.1.1719210483.1702021277&semt=ais" width="60" height="60" alt="">
+                <h4 class="mx-4 text-dark">Software Development</h4>
+              </div>
+              <p class="m-2 text-dark">From concept to deployment, leveraging the latest technologies to build scalable  products.</p>
+            </div>
+           </a>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 my-2 ">
+           <a href="" class="text-decoration-none mx-2">
+            <div class="feature_cards rounded-4 bg-white shadow p-4">
+              <div class="d-flex align-items-center">
+                <img src="https://cdn-icons-png.freepik.com/256/9381/9381873.png?uid=P130516280&ga=GA1.1.1719210483.1702021277&semt=ais" width="60" height="60" alt="">
+                <h4 class="mx-4 text-dark">Realible Support </h4>
+              </div>
+              <p class="m-2 text-dark">From concept to deployment, leveraging the latest technologies to build scalable  products.</p>
+            </div>
+           </a>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 my-2 ">
+            <a href="" class="text-decoration-none mx-2">
+              <div class="feature_cards rounded-4 bg-white shadow p-3">
+                <div class="d-flex align-items-center">
+                  <img src="https://cdn-icons-png.freepik.com/256/7552/7552266.png?uid=P130516280&ga=GA1.1.1719210483.1702021277" width="60" height="60" alt="">
+                  <h4 class="mx-4 text-dark">Continuous Updates</h4>
+                </div>
+                <p class="m-2 text-dark">From concept to deployment, leveraging the latest technologies to build scalable  products.</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 my-2 ">
+            <a href="" class="text-decoration-none mx-2">
+              <div class="feature_cards rounded-4 bg-white shadow p-3">
+                <div class="d-flex align-items-center">
+                  <img src="https://cdn-icons-png.freepik.com/256/11864/11864722.png?uid=P130516280&ga=GA1.1.1719210483.1702021277&semt=ais" width="60" height="60" alt="">
+                  <h4 class="mx-4 text-dark">Maintainability</h4>
+                </div>
+                <p class="m-2 text-dark">From concept to deployment, leveraging the latest technologies to build scalable  products.</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 my-2 ">
+           <a href="" class="text-decoration-none mx-2">
+            <div class="feature_cards rounded-4 bg-white shadow p-3">
+              <div class="d-flex align-items-center">
+                <img src="https://cdn-icons-png.freepik.com/256/11733/11733833.png?uid=P130516280&ga=GA1.1.1719210483.1702021277&semt=ais" width="60" height="60" alt="">
+                <h4 class="mx-4 text-dark">Software Development</h4>
+              </div>
+              <p class="m-2 text-dark">From concept to deployment, leveraging the latest technologies to build scalable  products.</p>
+            </div>
+           </a>
+          </div>
+        </div>
+       </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- About us -->
+  <section class="mt-5 my-5 about_us">
+   <div class="container p-3 py-5  rounded-3 position-relative">
+      <div class="position-absolute about_image1" style="top: -66px;left: 73px;">
+        <img src="images/about_image_1.png" alt="" height="200" width="200" style="transform: skewY(20deg);">
+      </div>
+      <div class="about_us_div text-center mt-5 pt-sm-5 pt-5 mt-sm-5">
+        <p class="fs-4">About Us</p>
+        <h3 class="fw-bold" style="color: #d17575;">Explore Core Values Of CapitalTechnologies</h3>
+        <div class="row m-0  mt-5 pt-3">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="about_Cards">
+                <div class="about_icon first_icon py-2">
+                  <img src="images/about_icon_1.png" style="filter: invert(1);" width="40" height="40" alt="">
+                </div>
+                <h5 class="my-3 text-start">Software Integration Services</h5>
+                <p class="text-start">Seamlessly integrating disparate systems for improved efficiency and productivity.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6  col-sm-12">
+              <div class="about_Cards">
+                <div class="about_icon second_icon py-2">
+                  <img src="images/about_icon_2.png" style="filter: invert(1);" width="40" height="40" alt="">
+                </div>
+                <h5 class="my-3 text-start">E-commerce Solutions</h5>
+                <p class="text-start">Empowering businesses to thrive online with scalable e-commerce platforms.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="about_Cards">
+                <div class="about_icon third_icon  py-2">
+                  <img src="images/about_icon_3.png" style="filter: invert(1);" width="40" height="40" alt="">
+                </div>
+                <h5 class="my-3 text-start">Custom Software Development</h5>
+                <p class="text-start">From ideation to implementation, we bring your vision to life.Tailored solutions to address unique business needs.</p> 
+              </div>
+            </div>
+            <div class="text-center">
+              <a href="" style="color: purple;"><p class="text-center">Learn more about Capital Technologies</p></a>
+              <button class="align-items-center btn d-inline-flex fs-5 fw-semibold mt-3 p-3 rounded-5 shadow start_free_trail text-bg-danger" style="background-color: #a74d98 !important;">Read More <img src="images/next.png" class="ms-1" style="filter:invert(1)" width="20" height="20" alt=""></button>
+            </div>
+          </div>
+      </div>
+        <div class="position-absolute  end-0" style="bottom: -137px;">
+          <img src="images/3d_cube.png" alt="" height="200" width="200">
+        </div>    
+   </div>
+  </section>
+ 
+  <!-- services -->
+  <section class="services mt-5">
+    <div class="row m-0 mt-5 justify-content-center align-items-center">
+      <div class="col-lg-6 col-md-8 col-sm-12 text-center">
+         <img src="images/Website.png" height="500" width="500">
+      </div>     
+      <div class="col-lg-5 col-md-8 col-sm-12">
+        <h4 style="color:var(--primary)">Services</h4>
+        <h1 class="text-dark fw-bold">E-commerce Solutions:</h1>
+        <p class="fs-5">Our e-commerce solutions drive sales, enhance customer experiences, and optimize online operations.</p>
+        <ul style="list-style:none">
+          <li>
+            <div class="d-flex align-items-center my-2">
+              <img src="images/check.png" width="20" height="20" alt="">
+              <p class=" m-0 ms-1">Intuitive storefronts and secure payments.</p>
+            </div>
+          </li>
+         <li>
+          <div class="d-flex align-items-center my-2">
+            <img src="images/check (2).png" width="20" height="20" alt="">
+            <p class=" m-0 ms-1">Intuitive storefronts and secure payments.</p>
+          </div>
+         </li>
+         <li>
+          <div class="d-flex align-items-center my-2">
+            <img src="images/check (3).png" width="20" height="20" alt="">
+            <p class=" m-0 ms-1">Intuitive storefronts and secure payments.</p>
+          </div>
+          <button class="align-items-center btn d-inline-flex fs-5 fw-semibold mt-3 p-3 rounded-5 shadow start_free_trail text-bg-danger" style="background-color: #a74d98 !important;">Learn More <img src="images/next.png" class="ms-1" style="filter:invert(1)" width="20" height="20" alt=""></button> 
+         </li>
+        </ul>
+       
+      </div>
+        
+      <div class="col-lg-5 col-md-8 col-sm-12">
+       <h1 class="text-dark fw-bold">Software Integration Services</h1>
+       <p class="fs-5">Seamlessly integrating disparate systems and applications to streamline workflows and enhance productivity.</p>
+       <ul style="list-style:none">
+         <li>
+           <div class="d-flex align-items-center my-2">
+             <img src="images/check.png" width="20" height="20" alt="">
+             <p class=" m-0 ms-1">Streamlined workflows and enhanced productivity.</p>
+           </div>
+         </li>
+        <li>
+         <div class="d-flex align-items-center my-2">
+           <img src="images/check (2).png" width="20" height="20" alt="">
+           <p class=" m-0 ms-1">Smooth data exchange and communication.</p>
+         </div>
+        </li>
+        <li>
+         <div class="d-flex align-items-center my-2">
+           <img src="images/check (3).png" width="20" height="20" alt="">
+           <p class=" m-0 ms-1">Seamless integration of disparate systems.</p>
+         </div>
+         <button class="align-items-center btn d-inline-flex fs-5 fw-semibold mt-3 p-3 rounded-5 shadow start_free_trail text-bg-danger" style="background-color: #a74d98 !important;">Learn More <img src="images/next.png" class="ms-1" style="filter:invert(1)" width="20" height="20" alt=""></button> 
+        </li>
+       </ul>
+      </div>  
+      <div class="col-lg-6 col-md-8 col-sm-12 text-center">
+        <img src="images/Integration.png" height="500" width="500">
+      </div>  
+      
+      <div class="col-lg-5 col-md-8 col-sm-12">
+        <img src="images/development.png" height="500" width="500">
+      </div>     
+      <div class="col-lg-5 col-md-8 col-sm-12">
+        <h1 class="text-dark fw-bold">Web Application Development</h1>
+        <p class="fs-5">Crafting dynamic and responsive web applications that engage users and deliver seamless experiences across devices. </p>
+        <ul style="list-style:none">
+          <li>
+            <div class="d-flex align-items-center my-2">
+              <img src="images/check.png" width="20" height="20" alt="">
+              <p class=" m-0 ms-1">Dynamic and responsive web applications
+              </p>
+            </div>
+          </li>
+          <li>
+          <div class="d-flex align-items-center my-2">
+            <img src="images/check (2).png" width="20" height="20" alt="">
+            <p class=" m-0 ms-1"> Seamless experiences across all devices</p>
+          </div>
+          </li>
+          <li>
+          <div class="d-flex align-items-center my-2">
+            <img src="images/check (3).png" width="20" height="20" alt="">
+            <p class=" m-0 ms-1"> Empowering businesses to thrive online</p>
+          </div>
+          <button class="align-items-center btn d-inline-flex fs-5 fw-semibold mt-3 p-3 rounded-5 shadow start_free_trail text-bg-danger" style="background-color: #a74d98 !important;">Learn More <img src="images/next.png" class="ms-1" style="filter:invert(1)" width="20" height="20" alt=""></button> 
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-lg-5 col-md-8 col-sm-12">
+        <h1 class="text-dark fw-bold">SEO Optimization Services</h1>
+        <p class="fs-5">Elevating your online presence and driving  traffic, our SEO optimization services ensure that your website ranks  on search engine that attracts the right audience</p>
+        <ul style="list-style:none">
+          <li>
+            <div class="d-flex align-items-center my-2">
+              <img src="images/check.png" width="20" height="20" alt="">
+              <p class=" m-0 ms-1">Comprehensive SEO Audits </p>
+            </div>
+          </li>
+         <li>
+          <div class="d-flex align-items-center my-2">
+            <img src="images/check (2).png" width="20" height="20" alt="">
+            <p class=" m-0 ms-1">  Strategic Keyword Research</p>
+          </div>
+         </li>
+         <li>
+          <div class="d-flex align-items-center my-2">
+            <img src="images/check (3).png" width="20" height="20" alt="">
+            <p class=" m-0 ms-1"> Content Optimization and Link Building</p>
+          </div>
+          <button class="align-items-center btn d-inline-flex fs-5 fw-semibold mt-3 p-3 rounded-5 shadow start_free_trail text-bg-danger" style="background-color: #a74d98 !important;">Learn More <img src="images/next.png" class="ms-1" style="filter:invert(1)" width="20" height="20" alt=""></button> 
+         </li>
+        </ul>
+      </div>  
+       <div class="col-lg-5 col-md-8 col-sm-12">
+         <img src="images/Seo.png" height="500" width="500">
+       </div>  
+    </div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $(window).resize(function () {
+        // Function to execute on window resize
+        var windowWidth = $(window).width();
+        if (windowWidth == 991) {
+          $(".navbar_collaspse_div").addClass("navbar_collaspse_div")
+        } 
+        // else {
+        //   $("header").addClass("main_header_div")
+        // }
+
+      });
+      $(window).scroll(function () {
+        // Check if user has scrolled down a certain amount (e.g., 100 pixels)
+        if ($(this).scrollTop() > 80) {
+          // Add or remove classes based on the scroll position
+          // $(".navbar").removeClass("mt-5 m-2 ");
+          $(".navbar").addClass("nav-color");
+          $(".nav-link").removeClass("text-white");
+          $(".nav-link").addClass("text-danger");
+
+
+        } else {
+
+          // Add the original classes
+          // $(".navbar").addClass("mt-5 m-2");
+          $(".navbar").removeClass("nav-color");
+          $(".nav-link").addClass("text-white");
+          // $(".nav-link").addClass("text-danger");
+
+        }
+      });
+    
+
+
+
+  });
+  </script>
+  <script>
+    AOS.init();
+  </script>
+
+</body>
+
+</html>
